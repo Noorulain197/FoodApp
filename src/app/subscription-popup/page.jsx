@@ -10,7 +10,7 @@ export default function SubscriptionPopup() {
   // Subscribe button handler
   const handleSubscribe = (e) => {
     e.preventDefault();
-    if(email) {
+    if (email) {
       // Yahan pe API call hoga (demo ke liye setTimeout use kiya hai)
       setTimeout(() => {
         setSubmitted(true);
@@ -24,9 +24,9 @@ export default function SubscriptionPopup() {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg p-4 md:p-8 max-w-[95%] md:max-w-md w-full mx-2 md:mx-4 relative">
-        
+
         {/* Close Button (Top-Right Corner) */}
-        <button 
+        <button
           onClick={() => setShowPopup(false)}
           className="absolute top-1 right-2 text-gray-500 hover:text-gray-700 text-2xl"
         >
@@ -37,15 +37,15 @@ export default function SubscriptionPopup() {
           // Subscription Form
           <>
             {/* Image Section */}
-            <img 
-              src="/popup-image.jpg" // Apni image ka path dalo
+            <img
+              src="/14.jpg" // Apni image ka path dalo
               alt="Special Offer"
               className="w-full h-[150px] md:h-48 object-cover mb-4 rounded-lg"
             />
-            
+
             {/* Title */}
             <h2 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-center">
-              Exclusive Offers Ke Liye Subscribe Karein!
+              Subscribe for Exclusive Offers!
             </h2>
 
             {/* Email Input Form */}
@@ -60,7 +60,7 @@ export default function SubscriptionPopup() {
               />
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                className="hover:bg-[#0B170D] text-white px-4 py-2 rounded-md bg-[#153D19] transition-colors"
               >
                 Subscribe
               </button>
@@ -75,10 +75,10 @@ export default function SubscriptionPopup() {
               </svg>
             </div>
             <h3 className="text-lg md:text-xl font-semibold mb-4">
-              Subscription Safal! 🎉
+              Subscription Added! 🎉
             </h3>
             <p className="text-gray-600 mb-4">
-              Aapke inbox mein special offers bhej diye gaye hain
+              Special offers have been sent to your inbox
             </p>
             <button
               onClick={() => setShowPopup(false)}
