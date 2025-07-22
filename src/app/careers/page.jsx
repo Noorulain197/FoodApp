@@ -8,7 +8,7 @@ import Header from "../header/page";
 import Footer from "../footer/page";
 
 function Careers() {
-  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
+  const [sliderRef, slider] = useKeenSlider({
     loop: true,
     renderMode: "performance",
     drag: false,
@@ -20,7 +20,9 @@ function Careers() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      slider.current?.next();
+      if (slider.current) {
+        slider.current.next();
+      }
     }, 3000);
     return () => clearInterval(interval);
   }, [slider]);
